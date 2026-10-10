@@ -59,11 +59,14 @@ export function MerchantSection() {
             <Store className="size-3.5" />
             <span>Rizipt For Store Owners & Merchants</span>
           </div>
-          <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white">
-            Stop Wasting Paper Rolls. Connect Directly With Every Customer.
+          <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+            Stop Wasting Paper Rolls.{" "}
+            <span className="block bg-gradient-to-r from-[#0094DA] via-sky-400 to-cyan-300 bg-clip-text text-transparent">
+              Connect Directly With Every Customer.
+            </span>
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-400 leading-relaxed">
-            Thermal printers jam, ink fades, and paper rolls cost hundreds every year. Rizipt empowers retail stores, cafes, and independent merchants with an all-in-one mobile toolkit: dispatch instant itemized digital receipts straight to customers&apos; phones and publish exclusive coupons that shoppers discover and redeem—with zero extra hardware and zero added fees.
+          <p className="mt-4 text-base sm:text-lg text-slate-400 max-w-3xl mx-auto leading-relaxed">
+            Thermal printers jam, ink fades, and paper rolls cost hundreds every year. Rizipt empowers store owners and merchants with an all-in-one mobile toolkit: dispatch instant digital receipts to customer phones and publish promotions shoppers love—with zero extra hardware and zero added fees.
           </p>
         </div>
 

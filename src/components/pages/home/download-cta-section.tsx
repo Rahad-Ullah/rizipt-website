@@ -35,7 +35,7 @@ export function DownloadCTASection() {
               </h2>
 
               <p className="mt-4 text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed">
-                Be among the first to experience paperless receipt tracking. Scan receipts with on-device AI precision, keep your expenses organized by folder, and discover exclusive merchant perks.
+                Download Rizipt for free on iOS and Android. Experience lightning-fast receipt scanning, keep expenses neatly filed into custom folders, and never miss out on merchant coupons.
               </p>
 
               {/* Download Buttons */}

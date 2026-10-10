@@ -108,11 +108,14 @@ export function PromoCodesSection() {
             <Tag className="size-3.5" />
             <span>In-App Merchant Perks</span>
           </div>
-          <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white">
-            Unlock Verified Deals Every Time You Shop
+          <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+            Shop Smarter.{" "}
+            <span className="block bg-gradient-to-r from-[#0094DA] via-sky-400 to-cyan-300 bg-clip-text text-transparent">
+              Unlock Exclusive In-App Deals.
+            </span>
           </h2>
-          <p className="mt-4 text-lg text-slate-400">
-            Rizipt connects your shopping routine with verified merchant discounts and partner offers—ready to redeem in 1 tap right from your phone.
+          <p className="mt-4 text-base sm:text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
+            Discover verified partner promotions, discount vouchers, and flash savings directly from top retail brands and neighborhood favorites—redeemable with one tap at checkout.
           </p>
         </div>
 

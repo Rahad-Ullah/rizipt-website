@@ -44,7 +44,7 @@ export function HeroSection() {
 
             {/* Subheading */}
             <p className="mt-6 text-lg sm:text-xl text-slate-400 font-normal leading-relaxed max-w-2xl">
-              Your digital receipt organizer with on-device AI extraction, merchant deals, and paperless business invoicing.
+              The intelligent mobile app that turns physical receipts into instant itemized records, unlocks exclusive merchant coupons, and keeps your finances effortlessly organized.
             </p>
 
             {/* Download Badges with dark glassmorphism styling */}

@@ -80,11 +80,14 @@ export function ScanExtractionDemo() {
             <Sparkles className="size-3.5" />
             <span>AI Extraction Flow</span>
           </div>
-          <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white">
-            Experience 3-Step AI Receipt Extraction
+          <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+            Snap Any Receipt.{" "}
+            <span className="block bg-gradient-to-r from-[#0094DA] via-sky-400 to-cyan-300 bg-clip-text text-transparent">
+              Organized in 3 Simple Steps.
+            </span>
           </h2>
-          <p className="mt-4 text-lg text-slate-400">
-            From physical paper to structured, tax-deductible record in under a second. See how Rizipt automates every step.
+          <p className="mt-4 text-base sm:text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
+            From physical paper to structured, tax-deductible records in under a second. See how Rizipt automates every capture step without tedious typing.
           </p>
         </div>
 
