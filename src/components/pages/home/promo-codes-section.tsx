@@ -110,7 +110,7 @@ export function PromoCodesSection() {
           </div>
           <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
             Shop Smarter.{" "}
-            <span className="block bg-gradient-to-r from-[#0094DA] via-sky-400 to-cyan-300 bg-clip-text text-transparent">
+            <span className="block bg-linear-to-r from-[#0094DA] via-sky-400 to-cyan-300 bg-clip-text text-transparent">
               Unlock Exclusive In-App Deals.
             </span>
           </h2>
@@ -200,16 +200,16 @@ export function PromoCodesSection() {
             {/* Right Column: High Fidelity Mobile Screen Mockup (Coupon Details Screen) */}
             <div className="lg:col-span-5 flex justify-center">
               {/* Obsidian Phone Chassis */}
-              <div className="relative w-full max-w-[325px] sm:max-w-[350px] rounded-[48px] border-[10px] border-slate-900 bg-slate-950 p-2.5 shadow-2xl ring-1 ring-slate-800/90 shadow-black/80">
+              <div className="relative w-full max-w-81.25 sm:max-w-87.5 rounded-[48px] border-10 border-slate-900 bg-slate-950 p-2.5 shadow-2xl ring-1 ring-slate-800/90 shadow-black/80">
                 {/* Dynamic Island Notch */}
                 <div className="relative mx-auto h-5 w-28 rounded-full bg-slate-900 mb-2 flex items-center justify-center">
                   <div className="size-2 rounded-full bg-slate-800 absolute right-4" />
                 </div>
 
                 {/* Mobile Screen Area */}
-                <div className="relative overflow-hidden rounded-[36px] bg-[#0E1420] min-h-[570px] flex flex-col justify-between text-slate-900 select-none">
+                <div className="relative overflow-hidden rounded-[36px] bg-[#0E1420] min-h-142.5 flex flex-col justify-between text-slate-900 select-none">
                   {/* Top Half: Retail Store Hero Backdrop & Header */}
-                  <div className="relative h-[240px] w-full overflow-hidden flex flex-col justify-between p-4">
+                  <div className="relative h-60 w-full overflow-hidden flex flex-col justify-between p-4">
                     {/* Background Store Image */}
                     <Image
                       src={activeCoupon.image}
@@ -221,7 +221,7 @@ export function PromoCodesSection() {
                     />
 
                     {/* Gradient Overlays for readable contrast */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/30 to-black/80 z-10" />
+                    <div className="absolute inset-0 bg-linear-to-b from-black/65 via-black/30 to-black/80 z-10" />
 
                     {/* In-App Status Bar (Top) */}
                     <div className="relative z-20 flex items-center justify-between text-white text-[11px] font-semibold pt-1">
@@ -309,12 +309,12 @@ export function PromoCodesSection() {
                     </div>
 
                     {/* Bottom CTA Button: Redeem Now / Redeemed State */}
-                    <div className="mt-5">
+                    <div className="mt-3.5 pt-1">
                       <button
                         type="button"
                         onClick={handleRedeem}
                         className={cn(
-                          "w-full rounded-full py-3.5 text-xs sm:text-sm font-bold text-white shadow-lg transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer active:scale-95",
+                          "w-full rounded-2xl py-2.5 text-xs font-bold text-white shadow-lg transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer active:scale-95",
                           isRedeemed
                             ? "bg-emerald-600 hover:bg-emerald-700 shadow-emerald-600/30 ring-2 ring-emerald-400/50"
                             : "bg-[#0094DA] hover:bg-[#007cb8] shadow-[#0094DA]/30"
@@ -322,19 +322,19 @@ export function PromoCodesSection() {
                       >
                         {isRedeemed ? (
                           <>
-                            <Check className="size-4 text-white" />
+                            <Check className="size-3.5 text-white stroke-3" />
                             <span>Voucher Activated: {activeCoupon.promoCode}</span>
                           </>
                         ) : (
                           <>
-                            <Tag className="size-4 fill-white" />
+                            <Tag className="size-3.5 fill-white" />
                             <span>Redeem Now</span>
                           </>
                         )}
                       </button>
 
                       {/* iOS Home Indicator */}
-                      <div className="h-1 w-28 bg-slate-900 rounded-full mx-auto mt-4" />
+                      <div className="h-1 w-24 bg-slate-900 rounded-full mx-auto mt-3" />
                     </div>
                   </div>
                 </div>
