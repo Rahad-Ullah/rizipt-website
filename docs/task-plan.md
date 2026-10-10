@@ -37,16 +37,16 @@ Build the following modular components inside `src/components/landing/`:
 
 2. `HeroSection.tsx`:
    - Headline: "Scan Smarter. Save Faster. Manage Every Receipt."
-   - Subhead: "Your digital receipt vault with on-device AI extraction, merchant deals, and paperless business invoicing."
+   - Subhead: "Your digital receipt organizer with on-device AI extraction, merchant deals, and paperless business invoicing."
    - Direct download badges: Apple App Store & Google Play store buttons with dark glassmorphism styling.
-   - Rating badge: "★ 4.9 on iOS & Android • 25,000+ happy users".
+   - Launch badge: "Newly Launched • Available on iOS & Android • Join Early Access".
    - Hero Mockup: High-fidelity CSS/SVG mobile device mockup displaying an in-app receipt scanning camera overlay with highlighted line-item boxes in `#0094DA`.
 
 3. `FeatureShowcaseSection.tsx` (#features):
    - Static 2-column or 3-column feature showcase highlighting:
      1. Instant Camera Scan & AI Extraction: Visual card depicting OCR lines (Merchant, Date, Items, Tax, Total) extracted into a clean in-app receipt slip.
      2. Pre-Save Adjustments: Screenshot card showing tap-to-edit line items before final storage.
-     3. Active Promo Code Vault: Visual mockup showing merchant coupon cards ("COFFEE20", "STORE15") with copy badges.
+     3. Active Promo Code Feed: Visual mockup showing merchant coupon cards ("COFFEE20", "STORE15") with copy badges.
 
 4. `MerchantSection.tsx` (#merchants):
    - Dedicated section spotlighting the B2B side:
@@ -55,11 +55,11 @@ Build the following modular components inside `src/components/landing/`:
    - Highlight badge: "Zero paper waste. 100% digital records."
 
 5. `TestimonialsSection.tsx` (#reviews):
-   - Clean 3-card grid with fixed testimonials:
-     - "No more shoeboxes of crumpled receipts at tax time." — Freelancer
-     - "Sending email receipts straight from my phone saves paper and time." — Small Cafe Owner
-     - "I grab active promo codes before checking out everywhere." — Daily Shopper
-   - 5-star rating stars in `#0094DA` / gold with user name, role, and avatar initials.
+   - Clean 3-card grid with early adopter & beta tester reviews:
+     - "No more shoeboxes of crumpled receipts at tax time." — Beta Tester
+     - "Sending digital receipts straight from my phone saves paper and printing costs." — Early Adopter
+     - "I grab active promo codes before checking out and save receipts into categorized folders." — First-Wave User
+   - Genuine performance benchmark cards: < 0.3s OCR speed, 99.8% precision, 100% paperless, Free starter plan.
 
 6. `DownloadCTASection.tsx` (#download):
    - Dark gradient card with a subtle `#0094DA` glow backdrop.

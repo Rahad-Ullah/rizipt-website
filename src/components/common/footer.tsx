@@ -12,7 +12,7 @@ export function Footer() {
           <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
             <Logo />
             <p className="mt-2 text-xs text-slate-400 max-w-sm">
-              Your digital receipt vault with on-device AI extraction and merchant deals.
+              Your smart receipt organizer with on-device AI extraction and merchant deals.
             </p>
           </div>
 

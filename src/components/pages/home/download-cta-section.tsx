@@ -35,7 +35,7 @@ export function DownloadCTASection() {
               </h2>
 
               <p className="mt-4 text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed">
-                Join 25,000+ smart shoppers and modern business owners. Scan receipts with on-device AI precision, claim live verified merchant discounts, and keep your finances effortlessly organized.
+                Be among the first to experience paperless receipt tracking. Scan receipts with on-device AI precision, keep your expenses organized by folder, and discover exclusive merchant perks.
               </p>
 
               {/* Download Buttons */}

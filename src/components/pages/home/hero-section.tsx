@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { Star, Zap, Sparkles, CheckCircle2, ScanLine, ShieldCheck } from "lucide-react";
+import { Sparkles, CheckCircle2, ScanLine, Scan } from "lucide-react";
 import { DownloadBadges } from "@/components/common";
 
 export function HeroSection() {
@@ -25,16 +25,12 @@ export function HeroSection() {
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-8">
           {/* Left Column: Headlines & Call to Actions */}
           <div className="flex flex-col items-center text-center lg:col-span-7 lg:items-start lg:text-left">
-            {/* Rating pill badge */}
+            {/* Early Access / New Launch Badge */}
             <div className="inline-flex items-center gap-2 rounded-full border border-[#0094DA]/25 bg-[#0094DA]/10 px-4 py-1.5 text-xs sm:text-sm font-medium text-[#0094DA] backdrop-blur-md mb-6 shadow-inner">
-              <div className="flex items-center text-amber-400">
-                <Star className="size-3.5 fill-amber-400 text-amber-400" />
-                <span className="ml-1 font-bold text-white">4.9</span>
-              </div>
+              <Sparkles className="size-3.5 text-cyan-400 shrink-0" />
+              <span className="text-slate-300">Available on iOS & Android</span>
               <span className="text-slate-600">•</span>
-              <span className="text-slate-300">Rated on iOS & Android</span>
-              <span className="text-slate-600">•</span>
-              <span className="font-semibold text-[#0094DA]">25,000+ happy users</span>
+              <span className="font-semibold text-[#0094DA]">Join Early Access</span>
             </div>
 
             {/* Main Headline */}
@@ -48,7 +44,7 @@ export function HeroSection() {
 
             {/* Subheading */}
             <p className="mt-6 text-lg sm:text-xl text-slate-400 font-normal leading-relaxed max-w-2xl">
-              Your digital receipt vault with on-device AI extraction, merchant deals, and paperless business invoicing.
+              Your digital receipt organizer with on-device AI extraction, merchant deals, and paperless business invoicing.
             </p>
 
             {/* Download Badges with dark glassmorphism styling */}
@@ -64,7 +60,7 @@ export function HeroSection() {
               </div>
               <div className="flex items-center justify-center lg:justify-start gap-2">
                 <CheckCircle2 className="size-4 text-[#0094DA] shrink-0" />
-                <span>256-Bit Vault Security</span>
+                <span>Organized Folders</span>
               </div>
               <div className="flex items-center justify-center lg:justify-start gap-2">
                 <CheckCircle2 className="size-4 text-[#0094DA] shrink-0" />
@@ -101,96 +97,112 @@ export function HeroSection() {
                   </span>
                 </div>
 
-                {/* Camera Viewfinder Box with Highlighted Line Items in #0094DA */}
-                <div className="relative mt-3 rounded-2xl bg-[#111827] border border-slate-800 p-3.5 shadow-inner overflow-hidden flex-1 flex flex-col justify-between">
-                  {/* Glowing Laser Scan Line Effect */}
-                  <div className="absolute inset-x-0 h-1 bg-gradient-to-r from-transparent via-[#0094DA] to-transparent shadow-[0_0_14px_#0094DA] animate-bounce opacity-90 z-20" />
+                {/* Camera Viewfinder Box with Paper Receipt under Live AI Extraction */}
+                <div className="relative mt-3 rounded-2xl bg-gradient-to-b from-[#0A0E17] via-[#0E1522] to-[#0A0E17] border border-slate-800 p-3 shadow-inner overflow-hidden flex-1 flex flex-col justify-between">
+                  {/* Subtle Camera Surface Background Grid (z-0) */}
+                  <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:16px_16px] opacity-30 z-0" />
 
-                  {/* Corner Edge-Detection Reticles */}
-                  <div className="absolute top-2 left-2 size-3.5 border-t-2 border-l-2 border-[#0094DA]" />
-                  <div className="absolute top-2 right-2 size-3.5 border-t-2 border-r-2 border-[#0094DA]" />
-                  <div className="absolute bottom-2 left-2 size-3.5 border-b-2 border-l-2 border-[#0094DA]" />
-                  <div className="absolute bottom-2 right-2 size-3.5 border-b-2 border-r-2 border-[#0094DA]" />
+                  {/* Top Viewfinder HUD Banner (Foreground z-20) */}
+                  <div className="relative z-20 flex items-center justify-between mb-2">
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-slate-900/90 px-2.5 py-1 text-[10px] font-medium text-slate-300 border border-slate-800 backdrop-blur-sm">
+                      <Scan className="size-3 text-[#0094DA]" />
+                      Focus: Receipt Document
+                    </span>
+                    <span className="rounded-full bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 text-[10px] font-semibold backdrop-blur-sm flex items-center gap-1">
+                      <span className="size-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                      Live Focus Locked
+                    </span>
+                  </div>
 
-                  {/* Scanned Receipt Slip */}
-                  <div className="rounded-xl bg-slate-950/90 p-3 border border-slate-800/90 text-slate-200">
-                    {/* Highlighted Merchant Box */}
-                    <div className="rounded-lg border border-[#0094DA] bg-[#0094DA]/10 p-2 relative mb-2.5">
+                  {/* Physical Paper Receipt under Camera Focus (z-10) */}
+                  <div className="relative z-10 mx-auto w-full rounded-2xl bg-slate-950/95 p-3.5 border-2 border-[#0094DA]/70 text-slate-200 shadow-2xl shadow-black/80 my-auto ring-1 ring-[#0094DA]/30">
+                    {/* Precision Optical Corner Reticles on 4 corners of receipt */}
+                    <div className="absolute -top-1.5 -left-1.5 size-3.5 border-t-2 border-l-2 border-[#38bdf8]" />
+                    <div className="absolute -top-1.5 -right-1.5 size-3.5 border-t-2 border-r-2 border-[#38bdf8]" />
+                    <div className="absolute -bottom-1.5 -left-1.5 size-3.5 border-b-2 border-l-2 border-[#38bdf8]" />
+                    <div className="absolute -bottom-1.5 -right-1.5 size-3.5 border-b-2 border-r-2 border-[#38bdf8]" />
+
+                    {/* Animated Laser Scanning Beam sweeping over the receipt contents */}
+                    <div
+                      className="pointer-events-none absolute inset-x-1.5 z-30 animate-scan-sweep"
+                      aria-hidden="true"
+                    >
+                      {/* Glowing horizontal laser line */}
+                      <div className="h-0.5 w-full bg-gradient-to-r from-transparent via-[#38bdf8] to-transparent shadow-[0_0_12px_#0094DA,0_0_26px_#0094DA]" />
+
+                      {/* Trailing illuminated light wash */}
+                      <div className="h-10 w-full -mt-0.5 bg-gradient-to-b from-[#0094DA]/25 via-[#0094DA]/5 to-transparent" />
+
+                      {/* Left and Right reticle markers on the beam */}
+                      <div className="absolute left-0 -top-1 size-2 rounded-full bg-[#38bdf8] shadow-[0_0_8px_#0094DA]" />
+                      <div className="absolute right-0 -top-1 size-2 rounded-full bg-[#38bdf8] shadow-[0_0_8px_#0094DA]" />
+                    </div>
+
+                    {/* Highlighted Merchant Box in #0094DA */}
+                    <div className="rounded-lg border border-[#0094DA] bg-[#0094DA]/10 p-2 mb-2">
                       <div className="flex items-center justify-between">
-                        <span className="text-xs font-black tracking-wider text-white uppercase">Trader Joe&apos;s #142</span>
-                        <span className="text-[9px] font-bold text-[#0094DA] bg-[#0094DA]/20 px-1.5 py-0.2 rounded border border-[#0094DA]/40">
-                          99.8% Match
+                        <span className="font-extrabold text-xs uppercase tracking-wider text-white">
+                          TRADER JOE&apos;S #142
+                        </span>
+                        <span className="text-[9px] font-bold text-[#0094DA] bg-[#0094DA]/20 px-1.5 py-0.5 rounded border border-[#0094DA]/30">
+                          Verified
                         </span>
                       </div>
-                      <span className="text-[10px] text-slate-400 font-mono block mt-0.5">Columbus Ave • Oct 09, 2026</span>
+                      <div className="flex justify-between items-center text-[10px] text-slate-400 font-mono mt-0.5">
+                        <span>Store #10492</span>
+                        <span>Oct 09, 2026</span>
+                      </div>
                     </div>
 
-                    {/* Highlighted Line Items */}
-                    <div className="space-y-1.5 text-[11px] font-mono">
-                      <div className="flex justify-between items-center py-1 px-1.5 rounded bg-slate-900/60 border border-slate-800">
-                        <span className="text-slate-300">Organic Hass Avocado (2x)</span>
-                        <span className="font-semibold text-white">$3.98</span>
+                    {/* Clean Monospace Line Items matching screenshot */}
+                    <div className="py-1 space-y-1.5 text-[11px] font-mono">
+                      <div className="flex justify-between items-center py-0.5 px-1.5 rounded bg-slate-900/60 border border-slate-800">
+                        <span className="text-slate-300">Organic Honeycrisp 2lb</span>
+                        <span className="font-semibold text-white">$6.99</span>
                       </div>
-                      <div className="flex justify-between items-center py-1 px-1.5 rounded bg-slate-900/60 border border-slate-800">
-                        <span className="text-slate-300">Almond Milk Barista 32oz</span>
-                        <span className="font-semibold text-white">$4.49</span>
+                      <div className="flex justify-between items-center py-0.5 px-1.5 rounded bg-slate-900/60 border border-slate-800">
+                        <span className="text-slate-300">Cold Brew Coffee 32oz</span>
+                        <span className="font-semibold text-white">$5.49</span>
                       </div>
-                      <div className="flex justify-between items-center py-1 px-1.5 rounded bg-slate-900/60 border border-slate-800">
-                        <span className="text-slate-300">Wild Caught Sockeye</span>
-                        <span className="font-semibold text-white">$16.99</span>
+                      <div className="flex justify-between items-center py-0.5 px-1.5 rounded bg-slate-900/60 border border-slate-800">
+                        <span className="text-slate-300">Wild Salmon Fillet</span>
+                        <span className="font-semibold text-white">$26.87</span>
                       </div>
+                    </div>
 
-                      {/* Highlighted Total Box in #0094DA */}
-                      <div className="mt-2 pt-2 border-t border-dashed border-slate-800">
-                        <div className="flex justify-between items-center rounded-lg border border-[#0094DA] bg-[#0094DA]/15 p-2 text-white">
-                          <span className="text-xs font-bold uppercase tracking-wider">TOTAL EXTRACTED</span>
-                          <span className="text-base font-extrabold text-[#0094DA]">$27.58</span>
-                        </div>
+                    {/* Tax & Total Extracted Box in #0094DA */}
+                    <div className="pt-2 mt-1 border-t border-dashed border-slate-800 text-[11px] font-mono">
+                      <div className="flex justify-between text-slate-400 px-1 py-0.5">
+                        <span>Tax (8.875%)</span>
+                        <span className="text-slate-200">$3.45</span>
+                      </div>
+                      <div className="mt-1 flex justify-between items-center rounded-lg border border-[#0094DA] bg-[#0094DA]/15 p-2 text-white">
+                        <span className="font-bold text-xs uppercase tracking-wider">TOTAL EXTRACTED</span>
+                        <span className="text-sm font-black text-[#0094DA]">$42.80</span>
                       </div>
                     </div>
                   </div>
 
-                  {/* AI Metadata Extraction Pills */}
-                  <div className="mt-3 grid grid-cols-2 gap-2 text-[10px]">
-                    <div className="rounded-xl bg-slate-950/80 p-2 border border-slate-800 flex flex-col">
-                      <span className="text-slate-400 uppercase font-semibold text-[9px]">Tax Classification</span>
-                      <span className="font-medium text-emerald-400 mt-0.5">✓ Deductible Pantry</span>
-                    </div>
-                    <div className="rounded-xl bg-slate-950/80 p-2 border border-slate-800 flex flex-col">
-                      <span className="text-slate-400 uppercase font-semibold text-[9px]">Payment Method</span>
-                      <span className="font-medium text-slate-200 mt-0.5">💳 Apple Pay (*9012)</span>
-                    </div>
+                  {/* Viewfinder Bottom Status (Scanning Stage without folder info) */}
+                  <div className="relative z-20 mt-1 flex items-center justify-between text-[10px] px-1 font-mono text-slate-400">
+                    <span className="inline-flex items-center gap-1.5">
+                      <span className="size-1.5 rounded-full bg-[#0094DA] animate-ping" />
+                      Auto-Detecting 4 Bounds
+                    </span>
+                    <span className="text-emerald-400 font-semibold">99.8% Clarity</span>
                   </div>
                 </div>
 
-                {/* Bottom App Action Bar */}
+                {/* Bottom App Action Bar: Live Ongoing AI Extraction State */}
                 <div className="mt-3 pt-2">
-                  <div className="w-full rounded-2xl bg-[#0094DA] text-white py-2.5 text-xs font-semibold shadow-md shadow-[#0094DA]/30 flex items-center justify-center gap-1.5">
-                    <ShieldCheck className="size-3.5" />
-                    <span>Saved to Secure Cloud Vault</span>
+                  <div className="w-full rounded-2xl bg-gradient-to-r from-[#0094DA] via-sky-500 to-[#0094DA] text-white py-2.5 text-xs font-semibold shadow-md shadow-[#0094DA]/30 flex items-center justify-center gap-2">
+                    <span className="relative flex size-2">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75" />
+                      <span className="relative inline-flex rounded-full size-2 bg-white" />
+                    </span>
+                    <span>AI Extracting Receipt Data...</span>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            {/* Floating Glassmorphic Badges around the device */}
-            <div className="absolute -left-6 top-1/4 hidden sm:flex items-center gap-2.5 rounded-2xl bg-[#111827]/90 border border-slate-700/60 p-3 shadow-xl backdrop-blur-md animate-in fade-in slide-in-from-left duration-700">
-              <div className="flex size-10 items-center justify-center rounded-xl bg-[#0094DA]/15 text-[#0094DA] border border-[#0094DA]/30">
-                <Zap className="size-5" />
-              </div>
-              <div>
-                <span className="text-xs font-bold text-white block">On-Device AI: 0.3s</span>
-                <span className="text-[11px] text-slate-400">Zero cloud latency</span>
-              </div>
-            </div>
-
-            <div className="absolute -right-6 bottom-16 hidden sm:flex items-center gap-2.5 rounded-2xl bg-[#111827]/90 border border-slate-700/60 p-3 shadow-xl backdrop-blur-md animate-in fade-in slide-in-from-right duration-700">
-              <div className="flex size-10 items-center justify-center rounded-xl bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">
-                <Sparkles className="size-5" />
-              </div>
-              <div>
-                <span className="text-xs font-bold text-white block">Promo Applied</span>
-                <span className="text-[11px] text-slate-400">Saved $12.50 at checkout</span>
               </div>
             </div>
           </div>

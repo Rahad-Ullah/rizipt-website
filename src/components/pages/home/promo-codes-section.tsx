@@ -23,7 +23,7 @@ interface PromoCode {
   minSpend: string;
   expires: string;
   verified: string;
-  usesToday: number;
+  badge: string;
   popular?: boolean;
 }
 
@@ -38,7 +38,7 @@ const PROMO_CODES: PromoCode[] = [
     minSpend: "Min. $15 spend",
     expires: "Expires in 5 days",
     verified: "Verified 12m ago",
-    usesToday: 842,
+    badge: "In-Store & Online",
     popular: true,
   },
   {
@@ -51,7 +51,7 @@ const PROMO_CODES: PromoCode[] = [
     minSpend: "Min. $75 spend",
     expires: "Expires end of month",
     verified: "Verified 2m ago",
-    usesToday: 1420,
+    badge: "Fresh Produce Deal",
     popular: true,
   },
   {
@@ -64,7 +64,7 @@ const PROMO_CODES: PromoCode[] = [
     minSpend: "Min. $40 spend",
     expires: "Expires Oct 28",
     verified: "Verified 1h ago",
-    usesToday: 512,
+    badge: "Online Exclusive",
   },
   {
     id: "promo-4",
@@ -76,7 +76,7 @@ const PROMO_CODES: PromoCode[] = [
     minSpend: "Min. $20 spend",
     expires: "Valid all week",
     verified: "Verified 24m ago",
-    usesToday: 934,
+    badge: "Dining Voucher",
   },
   {
     id: "promo-5",
@@ -88,7 +88,7 @@ const PROMO_CODES: PromoCode[] = [
     minSpend: "Min. $90 spend",
     expires: "Limited quantity",
     verified: "Verified 45m ago",
-    usesToday: 388,
+    badge: "Seasonal Offer",
   },
   {
     id: "promo-6",
@@ -96,11 +96,11 @@ const PROMO_CODES: PromoCode[] = [
     category: "Supermarket",
     code: "TARGETSAVE",
     discount: "10% CASHBACK",
-    description: "Instant 10% digital credit applied upon scanning receipt in Rzipt.",
+    description: "Instant 10% digital credit applied upon scanning receipt in Rizipt.",
     minSpend: "No min spend",
     expires: "Ongoing partner",
     verified: "Official Partner",
-    usesToday: 2190,
+    badge: "Instant Cashback",
     popular: true,
   },
 ];
@@ -260,7 +260,7 @@ export function PromoCodesSection() {
                     <ShieldCheck className="size-3" />
                     {promo.verified}
                   </span>
-                  <span>{promo.usesToday.toLocaleString()} redeemed today</span>
+                  <span className="text-slate-300 font-medium">{promo.badge}</span>
                 </div>
               </div>
             );

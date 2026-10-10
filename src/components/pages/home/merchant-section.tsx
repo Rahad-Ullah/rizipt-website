@@ -8,7 +8,6 @@ import {
   CheckCircle,
   Mail,
   Receipt,
-  Users,
   Zap,
 } from "lucide-react";
 import { toast } from "sonner";
@@ -31,7 +30,7 @@ export function MerchantSection() {
   const handleBroadcastPromo = (e: React.FormEvent) => {
     e.preventDefault();
     toast.success(`Promo ${promoTitle} is now live!`, {
-      description: `Broadcasting ${discountPercent}% discount to ~4,800 active Rzipt users within ${radiusMiles} miles.`,
+      description: `Broadcasting ${discountPercent}% discount to local shoppers within a ${radiusMiles}-mile radius.`,
     });
   };
 
@@ -141,7 +140,7 @@ export function MerchantSection() {
                 Direct-to-Customer Promo Hub
               </h3>
               <p className="mt-3 text-sm sm:text-base text-slate-400 leading-relaxed">
-                Publish targeted flash discounts that instantly reach active Rizipt users in your local neighborhood. Drive immediate foot traffic with zero ad-agency middlemen.
+                Publish targeted flash discounts that reach shoppers in your local neighborhood. Drive immediate foot traffic with zero ad-agency middlemen.
               </p>
 
               {/* Interactive Broadcast Simulator */}
@@ -206,10 +205,10 @@ export function MerchantSection() {
 
                   <div className="rounded-xl bg-[#0094DA]/10 p-2.5 text-[11px] text-cyan-300 border border-[#0094DA]/20 flex items-center justify-between">
                     <span className="flex items-center gap-1.5">
-                      <Users className="size-3.5" />
-                      Estimated Shoppers in Range:
+                      <Radio className="size-3.5" />
+                      Local Campaign Coverage:
                     </span>
-                    <strong className="font-bold text-white">~{Number(radiusMiles) * 960} users</strong>
+                    <strong className="font-bold text-white">{radiusMiles} Mile Radius</strong>
                   </div>
 
                   <Button

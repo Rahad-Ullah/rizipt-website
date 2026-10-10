@@ -48,7 +48,7 @@ const MILESTONES: Milestone[] = [
     description:
       "Quickly review the verified receipt and save it directly into your desired folder—such as Groceries, Business, or Tax Deductions.",
     icon: FolderCheck,
-    tags: ["Custom Folder Vault", "Tax Deductible Filing"],
+    tags: ["Organized Custom Folders", "Tax Deductible Filing"],
   },
 ];
 

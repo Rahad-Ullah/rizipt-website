@@ -12,7 +12,7 @@ interface Testimonial {
   avatarBg: string;
   rating: number;
   content: string;
-  verifiedType: "Freelancer" | "Small Cafe Owner" | "Daily Shopper";
+  verifiedType: "Beta Tester" | "Early Adopter" | "First-Wave User";
 }
 
 const TESTIMONIALS: Testimonial[] = [
@@ -25,7 +25,7 @@ const TESTIMONIALS: Testimonial[] = [
     avatarBg: "bg-purple-600",
     rating: 5,
     content: "No more shoeboxes of crumpled receipts at tax time. Everything is extracted on-device with 99.8% precision.",
-    verifiedType: "Freelancer",
+    verifiedType: "Beta Tester",
   },
   {
     id: "test-2",
@@ -35,8 +35,8 @@ const TESTIMONIALS: Testimonial[] = [
     avatarInitials: "MV",
     avatarBg: "bg-[#0094DA]",
     rating: 5,
-    content: "Sending email receipts straight from my phone saves paper and time. Plus, customer return rates have noticeably surged.",
-    verifiedType: "Small Cafe Owner",
+    content: "Sending digital receipts straight from my phone saves paper and printing costs. It made customer checkouts much faster.",
+    verifiedType: "Early Adopter",
   },
   {
     id: "test-3",
@@ -46,16 +46,16 @@ const TESTIMONIALS: Testimonial[] = [
     avatarInitials: "CD",
     avatarBg: "bg-emerald-600",
     rating: 5,
-    content: "I grab active promo codes before checking out everywhere. The instant cashback and coupon matching easily saves me $150/mo.",
-    verifiedType: "Daily Shopper",
+    content: "I grab active promo codes before checking out and save receipts into categorized folders. It's clean, fast, and simple.",
+    verifiedType: "First-Wave User",
   },
 ];
 
 const STATS = [
-  { label: "Active Mobile Users", value: "25,000+" },
-  { label: "Receipts Scanned & Stored", value: "1.8M+" },
-  { label: "Shopper Savings Unlocked", value: "$1.2M+" },
-  { label: "App Store & Play Rating", value: "4.9 ★" },
+  { label: "OCR Recognition Speed", value: "< 0.3s" },
+  { label: "AI Extraction Precision", value: "99.8%" },
+  { label: "Paper & Clutter Reduced", value: "100%" },
+  { label: "Starter Plan Access", value: "Free" },
 ];
 
 export function TestimonialsSection() {
@@ -66,13 +66,13 @@ export function TestimonialsSection() {
         <div className="mx-auto max-w-3xl text-center">
           <div className="inline-flex items-center gap-1.5 rounded-full bg-[#0094DA]/10 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-[#0094DA] border border-[#0094DA]/20">
             <HeartHandshake className="size-3.5" />
-            <span>Community Stories</span>
+            <span>Early Adopter Feedback</span>
           </div>
           <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white">
-            Loved by Everyday Shoppers & Store Owners
+            Early Feedback from Beta Testers & Shoppers
           </h2>
           <p className="mt-4 text-lg text-slate-400">
-            Hear how Rizipt is transforming expense tracking and local savings.
+            Here is what our first cohort of users have to say about going completely paperless with Rizipt.
           </p>
         </div>
 

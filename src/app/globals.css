@@ -139,3 +139,22 @@
     @apply font-sans;
   }
 }
+
+@keyframes scan-sweep {
+  0% {
+    top: 4%;
+    opacity: 0.85;
+  }
+  50% {
+    top: 92%;
+    opacity: 1;
+  }
+  100% {
+    top: 4%;
+    opacity: 0.85;
+  }
+}
+
+.animate-scan-sweep {
+  animation: scan-sweep 3.2s ease-in-out infinite;
+}
