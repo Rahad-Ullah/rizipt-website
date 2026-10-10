@@ -1,0 +1,21 @@
+{
+  "name": "Rizipt - AI Receipt Scanner & Coupons",
+  "short_name": "Rizipt",
+  "description": "Scan receipts instantly with on-device OCR, track expenses neatly, and unlock verified merchant promo codes.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B0F17",
+  "theme_color": "#0094DA",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
