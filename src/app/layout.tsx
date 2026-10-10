@@ -146,7 +146,7 @@ const jsonLd = {
       "@id": `${siteUrl}/#organization`,
       "name": "Rizipt Technologies",
       "url": siteUrl,
-      "logo": `${siteUrl}/icon.png`,
+      "logo": `${siteUrl}/logo.png`,
       "sameAs": [
         "https://twitter.com/riziptapp",
       ],
