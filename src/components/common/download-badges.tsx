@@ -1,5 +1,6 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
+import { APP_LINKS } from "@/lib/app-links";
 
 interface DownloadBadgesProps {
   className?: string;
@@ -22,7 +23,9 @@ export function DownloadBadges({
     <div className={cn("flex flex-wrap items-center gap-3 sm:gap-4", className)}>
       {/* Apple App Store */}
       <a
-        href="#download"
+        href={APP_LINKS.appStore}
+        target="_blank"
+        rel="noopener noreferrer"
         className={buttonClass}
         aria-label="Download Rizipt on the Apple App Store"
       >
@@ -48,7 +51,9 @@ export function DownloadBadges({
 
       {/* Google Play Store */}
       <a
-        href="#download"
+        href={APP_LINKS.playStore}
+        target="_blank"
+        rel="noopener noreferrer"
         className={buttonClass}
         aria-label="Get Rizipt on Google Play"
       >
