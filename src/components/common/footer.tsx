@@ -26,10 +26,10 @@ export function Footer() {
           <p>© {new Date().getFullYear()} Rizipt. All rights reserved.</p>
 
           <div className="flex items-center space-x-6 text-slate-400">
-            <Link href="/" className="hover:text-[#0094DA] transition-colors">
+            <Link href="/privacy-policy" className="hover:text-[#0094DA] transition-colors">
               Privacy Policy
             </Link>
-            <Link href="/" className="hover:text-[#0094DA] transition-colors">
+            <Link href="/terms-of-service" className="hover:text-[#0094DA] transition-colors">
               Terms of Service
             </Link>
             <Link href="/" className="hover:text-[#0094DA] transition-colors">
