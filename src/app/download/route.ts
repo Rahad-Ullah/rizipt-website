@@ -1,5 +1,5 @@
 import { NextResponse, type NextRequest } from "next/server";
-import { APP_LINKS } from "@/lib/app-links";
+import { getAppLinks } from "@/lib/app-links";
 
 export const dynamic = "force-dynamic";
 
@@ -11,6 +11,7 @@ export const dynamic = "force-dynamic";
  */
 export async function GET(request: NextRequest) {
   const userAgent = request.headers.get("user-agent")?.toLowerCase() || "";
+  const links = await getAppLinks();
 
   const isIOS =
     /iphone|ipad|ipod/.test(userAgent) ||
@@ -18,14 +19,14 @@ export async function GET(request: NextRequest) {
   const isAndroid = /android/.test(userAgent);
 
   if (isIOS) {
-    return NextResponse.redirect(APP_LINKS.appStore, { status: 307 });
+    return NextResponse.redirect(links.appStore, { status: 307 });
   }
 
   if (isAndroid) {
-    return NextResponse.redirect(APP_LINKS.playStore, { status: 307 });
+    return NextResponse.redirect(links.playStore, { status: 307 });
   }
 
   // Desktop or unrecognized device: redirect back to website download section
-  const origin = request.nextUrl.origin || APP_LINKS.siteUrl;
+  const origin = request.nextUrl.origin || links.siteUrl;
   return NextResponse.redirect(`${origin}/#download`, { status: 307 });
 }

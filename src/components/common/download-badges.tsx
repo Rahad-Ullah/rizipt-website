@@ -5,11 +5,15 @@ import { APP_LINKS } from "@/lib/app-links";
 interface DownloadBadgesProps {
   className?: string;
   size?: "default" | "lg";
+  appStoreUrl?: string;
+  playStoreUrl?: string;
 }
 
 export function DownloadBadges({
   className,
   size = "default",
+  appStoreUrl,
+  playStoreUrl,
 }: DownloadBadgesProps) {
   const isLg = size === "lg";
 
@@ -23,7 +27,7 @@ export function DownloadBadges({
     <div className={cn("flex flex-wrap items-center gap-3 sm:gap-4", className)}>
       {/* Apple App Store */}
       <a
-        href={APP_LINKS.appStore}
+        href={appStoreUrl || APP_LINKS.appStore}
         target="_blank"
         rel="noopener noreferrer"
         className={buttonClass}
@@ -51,7 +55,7 @@ export function DownloadBadges({
 
       {/* Google Play Store */}
       <a
-        href={APP_LINKS.playStore}
+        href={playStoreUrl || APP_LINKS.playStore}
         target="_blank"
         rel="noopener noreferrer"
         className={buttonClass}
