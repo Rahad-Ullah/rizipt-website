@@ -4,7 +4,7 @@ import * as React from "react";
 import { Sparkles, CheckCircle2, ScanLine, Scan } from "lucide-react";
 import { DownloadBadges } from "@/components/common";
 
-export function HeroSection() {
+export function HeroSection({ appLinks }: { appLinks: { appStore: string, playStore: string, siteUrl: string } }) {
   return (
     <section className="relative overflow-hidden pt-10 pb-20 md:pt-16 md:pb-28 lg:pt-24 lg:pb-36 bg-[#0B0F17]">
       {/* Background radial glows with #0094DA at 8%–15% opacity */}
@@ -49,7 +49,7 @@ export function HeroSection() {
 
             {/* Download Badges with dark glassmorphism styling */}
             <div className="mt-8 flex flex-col sm:flex-row items-center gap-4">
-              <DownloadBadges size="lg" />
+              <DownloadBadges size="lg" appStoreUrl={appLinks.appStore} playStoreUrl={appLinks.playStore} />
             </div>
 
             {/* Quick feature highlights */}

@@ -2,8 +2,11 @@ import * as React from "react";
 import Link from "next/link";
 import { Logo } from "../common/logo";
 import { DownloadBadges } from "../common/download-badges";
+import { getAppLinks } from "@/lib/app-links";
 
-export function Footer() {
+export async function Footer() {
+  const appLinks = await getAppLinks();
+
   return (
     <footer className="border-t border-slate-800/80 bg-[#0B0F17] text-slate-400">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
@@ -17,7 +20,7 @@ export function Footer() {
           </div>
 
           <div className="flex items-center">
-            <DownloadBadges size="default" />
+            <DownloadBadges size="default" appStoreUrl={appLinks.appStore} playStoreUrl={appLinks.playStore} />
           </div>
         </div>
 
@@ -31,9 +34,6 @@ export function Footer() {
             </Link>
             <Link href="/terms-of-service" className="hover:text-[#0094DA] transition-colors">
               Terms of Service
-            </Link>
-            <Link href="/" className="hover:text-[#0094DA] transition-colors">
-              Contact Support
             </Link>
           </div>
         </div>

@@ -1,10 +1,8 @@
-"use client";
-
 import * as React from "react";
 import { Sparkles, Smartphone, Check } from "lucide-react";
 import { DownloadBadges, DynamicQRCode } from "@/components/common";
 
-export function DownloadCTASection() {
+export function DownloadCTASection({ appLinks }: { appLinks: { appStore: string, playStore: string, siteUrl: string } }) {
   return (
     <section id="download" className="py-20 md:py-28 bg-[#0B0F17] border-t border-slate-800/80 scroll-mt-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -40,7 +38,7 @@ export function DownloadCTASection() {
 
               {/* Download Buttons */}
               <div className="mt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                <DownloadBadges size="lg" />
+                <DownloadBadges size="lg" appStoreUrl={appLinks.appStore} playStoreUrl={appLinks.playStore} />
               </div>
 
               {/* Micro Trust Bullets */}

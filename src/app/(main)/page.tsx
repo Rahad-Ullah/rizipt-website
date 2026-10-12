@@ -6,16 +6,19 @@ import {
   TestimonialsSection,
   DownloadCTASection,
 } from "@/components/pages/home";
+import { getAppLinks } from "@/lib/app-links";
 
-export default function Home() {
+export default async function Home() {
+  const appLinks = await getAppLinks();
+
   return (
     <main>
-      <HeroSection />
+      <HeroSection appLinks={appLinks} />
       <ScanExtractionDemo />
       <PromoCodesSection />
       <MerchantSection />
       <TestimonialsSection />
-      <DownloadCTASection />
+      <DownloadCTASection appLinks={appLinks} />
     </main>
   );
 }

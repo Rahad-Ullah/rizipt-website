@@ -122,13 +122,3 @@ export async function getAppLinks(): Promise<{
     siteUrl: DEFAULT_APP_LINKS.siteUrl,
   };
 }
-
-/**
- * Returns the universal smart QR code link that detects device on scan.
- */
-export function getSmartDownloadUrl(): string {
-  if (typeof window !== "undefined" && window.location.origin) {
-    return `${window.location.origin}/download`;
-  }
-  return `${DEFAULT_APP_LINKS.siteUrl}/download`;
-}
