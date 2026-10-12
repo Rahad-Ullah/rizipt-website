@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { QRCodeSVG } from "qrcode.react";
-import { APP_LINKS } from "@/lib/app-links";
+import { DEFAULT_APP_LINKS } from "@/lib/app-links";
 import { cn } from "@/lib/utils";
 
 interface DynamicQRCodeProps {
@@ -17,7 +17,7 @@ export function DynamicQRCode({
   className,
 }: DynamicQRCodeProps) {
   const [downloadUrl, setDownloadUrl] = React.useState<string>(
-    url || `${APP_LINKS.siteUrl}/download`
+    url || `${DEFAULT_APP_LINKS.siteUrl}/download`
   );
 
   React.useEffect(() => {

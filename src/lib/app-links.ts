@@ -57,9 +57,6 @@ export const DEFAULT_APP_LINKS = {
     process.env.NEXT_PUBLIC_SITE_URL || "https://rizipt.com",
 };
 
-// Backwards-compatible export for static/client usage
-export const APP_LINKS = DEFAULT_APP_LINKS;
-
 /**
  * Fetch general platform settings from backend API.
  * Endpoint: GET {{BASE_URL}}/settings
