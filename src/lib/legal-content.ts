@@ -163,16 +163,14 @@ export async function getLegalDisclaimer(
     : DEFAULT_TERMS_OF_SERVICE_HTML;
 
   // Check possible backend base URL environment variables
-  const rawBaseUrl =
+  const baseApiUrl =
     process.env.NEXT_PUBLIC_BASE_URL ||
     process.env.NEXT_PUBLIC_API_URL ||
     "";
 
-  if (rawBaseUrl) {
+  if (baseApiUrl) {
     try {
-      // Normalize base URL without trailing slash
-      const cleanBase = rawBaseUrl.replace(/\/+$/, "");
-      const endpoint = `${cleanBase}/disclaimers/${type}`;
+      const endpoint = `${baseApiUrl}/disclaimers/${type}`;
 
       const res = await fetch(endpoint, {
         method: "GET",
@@ -182,7 +180,7 @@ export async function getLegalDisclaimer(
         // Cache for at least 1 hour (3600 seconds)
         next: {
           revalidate: 3600,
-          tags: ["disclaimers", `disclaimer-${type}`],
+          tags: ["disclaimers"],
         },
       });
 

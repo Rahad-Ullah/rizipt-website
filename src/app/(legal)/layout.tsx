@@ -2,7 +2,6 @@ import * as React from "react";
 import Link from "next/link";
 import { ChevronLeft, Mail, ArrowRight } from "lucide-react";
 import { Navbar, Footer } from "@/components/common";
-import "./legal.css";
 
 export default function LegalRouteLayout({
   children,

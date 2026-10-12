@@ -58,9 +58,9 @@ export default async function TermsOfServicePage() {
           aria-hidden="true"
         />
 
-        {/* Contained Formal HTML Renderer */}
+        {/* Contained Formal HTML Renderer using @tailwindcss/typography */}
         <div
-          className="legal-prose-content"
+          className="prose prose-invert prose-slate max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-white prose-p:text-slate-400 prose-p:leading-relaxed prose-a:text-[#0094DA] prose-a:no-underline hover:prose-a:underline prose-strong:text-white prose-blockquote:border-l-[#0094DA] prose-blockquote:bg-[#0094DA]/5 prose-blockquote:py-1 prose-blockquote:px-4 prose-blockquote:rounded-r-lg prose-table:border-slate-800 prose-th:bg-slate-900/80 prose-th:text-white prose-td:border-slate-800"
           dangerouslySetInnerHTML={{ __html: data.content }}
         />
       </div>
