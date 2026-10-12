@@ -1,7 +1,7 @@
 import * as React from "react";
 import Link from "next/link";
-import { Logo } from "./logo";
-import { DownloadBadges } from "./download-badges";
+import { Logo } from "../common/logo";
+import { DownloadBadges } from "../common/download-badges";
 
 export function Footer() {
   return (

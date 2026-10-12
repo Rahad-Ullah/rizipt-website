@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { FileText, Calendar } from "lucide-react";
 import { getLegalDisclaimer } from "@/lib/legal-content";
-import { PrintButton } from "@/components/layout";
+import { PrintButton } from "@/components/common";
 
 export const revalidate = 3600; // Cache page for at least 1 hour
 
