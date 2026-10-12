@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
 
-export default function TermsRedirect() {
+export default function TermsRedirectPage() {
   redirect("/terms-of-service");
 }
