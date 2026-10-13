@@ -16,15 +16,13 @@ export function DynamicQRCode({
   size = 150,
   className,
 }: DynamicQRCodeProps) {
-  const [downloadUrl, setDownloadUrl] = React.useState<string>(
-    url || `${DEFAULT_APP_LINKS.siteUrl}/download`
+  const origin = React.useSyncExternalStore(
+    () => () => {},
+    () => (typeof window !== "undefined" ? window.location.origin : DEFAULT_APP_LINKS.siteUrl),
+    () => DEFAULT_APP_LINKS.siteUrl
   );
 
-  React.useEffect(() => {
-    if (!url && typeof window !== "undefined") {
-      setDownloadUrl(`${window.location.origin}/download`);
-    }
-  }, [url]);
+  const downloadUrl = url || `${origin}/download`;
 
   return (
     <div
