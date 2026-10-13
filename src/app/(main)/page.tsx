@@ -12,13 +12,13 @@ export default async function Home() {
   const appLinks = await getAppLinks();
 
   return (
-    <main>
+    <div>
       <HeroSection appLinks={appLinks} />
       <ScanExtractionDemo />
       <PromoCodesSection />
       <MerchantSection />
       <TestimonialsSection />
       <DownloadCTASection appLinks={appLinks} />
-    </main>
+    </div>
   );
 }
