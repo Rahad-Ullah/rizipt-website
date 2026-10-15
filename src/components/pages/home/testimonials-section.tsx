@@ -64,7 +64,7 @@ const STATS = [
 
 export function TestimonialsSection() {
   return (
-    <section id="reviews" className="py-20 md:py-28 bg-[#0B0F17] border-t border-slate-800/80 scroll-mt-16">
+    <section id="reviews" className="py-20 md:py-28 bg-slate-50/50 dark:bg-[#0B0F17] border-t border-slate-200/80 dark:border-slate-800/80 scroll-mt-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mx-auto max-w-3xl text-center">
@@ -72,13 +72,13 @@ export function TestimonialsSection() {
             <HeartHandshake className="size-3.5" />
             <span>Community Stories</span>
           </div>
-          <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+          <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
             Built for Everyday Shoppers.{" "}
-            <span className="bg-gradient-to-r from-[#0094DA] via-sky-400 to-cyan-300 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#0094DA] via-sky-500 dark:via-sky-400 to-cyan-500 dark:to-cyan-300 bg-clip-text text-transparent">
               Loved by Real People.
             </span>
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
             From freelancers organizing tax deductions to local store owners and everyday shoppers unlocking merchant perks, see how Rizipt replaces paper clutter with effortless clarity.
           </p>
         </div>
@@ -88,12 +88,12 @@ export function TestimonialsSection() {
           {STATS.map((stat) => (
             <div
               key={stat.label}
-              className="rounded-2xl bg-[#111827]/75 border border-slate-800 p-5 text-center shadow-lg backdrop-blur-md"
+              className="rounded-2xl bg-white dark:bg-[#111827]/75 border border-slate-200 dark:border-slate-800 p-5 text-center shadow-sm dark:shadow-lg backdrop-blur-md"
             >
               <div className="text-2xl sm:text-3xl font-extrabold text-[#0094DA] tracking-tight">
                 {stat.value}
               </div>
-              <div className="mt-1 text-xs sm:text-sm font-medium text-slate-400">
+              <div className="mt-1 text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-400">
                 {stat.label}
               </div>
             </div>
@@ -105,7 +105,7 @@ export function TestimonialsSection() {
           {TESTIMONIALS.map((t) => (
             <div
               key={t.id}
-              className="flex flex-col justify-between rounded-3xl bg-[#111827]/75 border border-slate-800/90 p-6 sm:p-7 shadow-xl backdrop-blur-md hover:border-[#0094DA]/50 hover:shadow-[#0094DA]/10 transition-all duration-300 relative group"
+              className="flex flex-col justify-between rounded-3xl bg-white dark:bg-[#111827]/75 border border-slate-200/90 dark:border-slate-800/90 p-6 sm:p-7 shadow-md dark:shadow-xl backdrop-blur-md hover:border-[#0094DA]/50 hover:shadow-[#0094DA]/10 transition-all duration-300 relative group"
             >
               <div>
                 {/* Top Row: Stars + Category Pill */}
@@ -116,22 +116,22 @@ export function TestimonialsSection() {
                     ))}
                   </div>
 
-                  <span className="inline-flex items-center rounded-full bg-[#0094DA]/10 border border-[#0094DA]/25 px-2.5 py-0.5 text-[10px] font-semibold text-[#38bdf8]">
+                  <span className="inline-flex items-center rounded-full bg-[#0094DA]/10 border border-[#0094DA]/25 px-2.5 py-0.5 text-[10px] font-semibold text-[#0094DA] dark:text-[#38bdf8]">
                     {t.highlight}
                   </span>
                 </div>
 
                 {/* Quote Body with subtle quote mark accent */}
                 <div className="mt-4 relative">
-                  <Quote className="size-6 text-slate-700/60 absolute -top-1 -left-1 -z-0 opacity-40" />
-                  <p className="relative z-10 text-sm text-slate-300 leading-relaxed italic">
+                  <Quote className="size-6 text-slate-200 dark:text-slate-700/60 absolute -top-1 -left-1 -z-0 opacity-40" />
+                  <p className="relative z-10 text-sm text-slate-700 dark:text-slate-300 leading-relaxed italic">
                     &ldquo;{t.content}&rdquo;
                   </p>
                 </div>
               </div>
 
               {/* Author Footer with Real Profile Photo */}
-              <div className="mt-6 flex items-center justify-between border-t border-slate-800/90 pt-4">
+              <div className="mt-6 flex items-center justify-between border-t border-slate-200 dark:border-slate-800/90 pt-4">
                 <div className="flex items-center gap-3">
                   <div className="relative size-12 shrink-0 rounded-full overflow-hidden ring-2 ring-[#0094DA]/30 shadow-md">
                     <Image
@@ -143,15 +143,15 @@ export function TestimonialsSection() {
                     />
                   </div>
                   <div>
-                    <h4 className="text-sm font-bold text-white leading-tight">
+                    <h4 className="text-sm font-bold text-slate-900 dark:text-white leading-tight">
                       {t.name}
                     </h4>
-                    <p className="text-[11px] text-slate-400 font-medium">{t.role}</p>
-                    <p className="text-[10px] text-slate-500">{t.location}</p>
+                    <p className="text-[11px] text-slate-600 dark:text-slate-400 font-medium">{t.role}</p>
+                    <p className="text-[10px] text-slate-400 dark:text-slate-500">{t.location}</p>
                   </div>
                 </div>
 
-                <span className="inline-flex items-center gap-1 rounded-full bg-slate-900 border border-slate-700/80 px-2.5 py-1 text-[10px] font-semibold text-slate-300 shrink-0">
+                <span className="inline-flex items-center gap-1 rounded-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700/80 px-2.5 py-1 text-[10px] font-semibold text-slate-700 dark:text-slate-300 shrink-0">
                   <CheckCircle2 className="size-3 text-[#0094DA]" />
                   {t.verifiedType}
                 </span>

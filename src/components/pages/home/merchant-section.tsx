@@ -51,7 +51,7 @@ export function MerchantSection() {
   };
 
   return (
-    <section id="merchants" className="py-20 md:py-28 bg-[#0B0F17] border-t border-slate-800/80 scroll-mt-16">
+    <section id="merchants" className="py-20 md:py-28 bg-white dark:bg-[#0B0F17] border-t border-slate-200/80 dark:border-slate-800/80 scroll-mt-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mx-auto max-w-3xl text-center">
@@ -59,13 +59,13 @@ export function MerchantSection() {
             <Store className="size-3.5" />
             <span>Rizipt For Store Owners & Merchants</span>
           </div>
-          <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+          <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
             Stop Wasting Paper Rolls.{" "}
-            <span className="block bg-gradient-to-r from-[#0094DA] via-sky-400 to-cyan-300 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-[#0094DA] via-sky-500 dark:via-sky-400 to-cyan-500 dark:to-cyan-300 bg-clip-text text-transparent">
               Connect Directly With Every Customer.
             </span>
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-400 max-w-3xl mx-auto leading-relaxed">
+          <p className="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-400 max-w-3xl mx-auto leading-relaxed">
             Thermal printers jam, ink fades, and paper rolls cost hundreds every year. Rizipt empowers store owners and merchants with an all-in-one mobile toolkit: dispatch instant digital receipts to customer phones and publish promotions shoppers love—with zero extra hardware and zero added fees.
           </p>
         </div>
@@ -80,8 +80,8 @@ export function MerchantSection() {
               className={cn(
                 "group cursor-pointer rounded-3xl border p-6 sm:p-7 transition-all duration-300 relative overflow-hidden",
                 activeTab === "receipt"
-                  ? "border-[#0094DA]/60 bg-[#111827]/90 shadow-xl shadow-[#0094DA]/10 ring-1 ring-[#0094DA]/30"
-                  : "border-slate-800 bg-[#111827]/50 hover:border-slate-700 hover:bg-[#111827]/70"
+                  ? "border-[#0094DA]/70 bg-sky-50/70 dark:bg-[#111827]/90 shadow-xl shadow-[#0094DA]/10 ring-1 ring-[#0094DA]/30"
+                  : "border-slate-200 bg-white/90 dark:border-slate-800 dark:bg-[#111827]/50 hover:border-slate-300 dark:hover:border-slate-700 hover:bg-slate-50 dark:hover:bg-[#111827]/70"
               )}
             >
               <div className="flex items-start justify-between gap-4">
@@ -91,14 +91,14 @@ export function MerchantSection() {
                       "size-12 rounded-2xl flex items-center justify-center shrink-0 border transition-colors",
                       activeTab === "receipt"
                         ? "bg-[#0094DA] text-white border-[#0094DA]"
-                        : "bg-slate-900 text-slate-400 border-slate-800 group-hover:text-white"
+                        : "bg-slate-100 text-slate-500 border-slate-200 group-hover:text-slate-900 dark:bg-slate-900 dark:text-slate-400 dark:border-slate-800 dark:group-hover:text-white"
                     )}
                   >
                     <Receipt className="size-6" />
                   </div>
                   <div>
                     <div className="flex items-center gap-2">
-                      <h3 className="text-xl font-bold text-white tracking-tight">
+                      <h3 className="text-xl font-bold text-slate-900 dark:text-white tracking-tight">
                         1-Tap Digital Receipt Dispatcher
                       </h3>
                       {activeTab === "receipt" && (
@@ -107,19 +107,19 @@ export function MerchantSection() {
                         </span>
                       )}
                     </div>
-                    <p className="text-xs text-slate-400 mt-0.5">
+                    <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
                       Paperless point-of-sale receipt issuance for smartphones & tablets
                     </p>
                   </div>
                 </div>
               </div>
 
-              <p className="mt-4 text-sm text-slate-300 leading-relaxed">
+              <p className="mt-4 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                 Send clean, itemized digital receipts straight to your customer&apos;s Rizipt app via phone, email, or instant QR scan in less than 2 seconds. Completely eliminates costly thermal paper rolls, toxic BPA coatings, and lost slips.
               </p>
 
               {/* Feature Checklist */}
-              <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-4 border-t border-slate-800/80 text-xs text-slate-300">
+              <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-4 border-t border-slate-200 dark:border-slate-800/80 text-xs text-slate-700 dark:text-slate-300">
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="size-4 text-[#0094DA] shrink-0" />
                   <span>100% paperless & eco-friendly</span>
@@ -145,8 +145,8 @@ export function MerchantSection() {
               className={cn(
                 "group cursor-pointer rounded-3xl border p-6 sm:p-7 transition-all duration-300 relative overflow-hidden",
                 activeTab === "coupon"
-                  ? "border-[#0094DA]/60 bg-[#111827]/90 shadow-xl shadow-[#0094DA]/10 ring-1 ring-[#0094DA]/30"
-                  : "border-slate-800 bg-[#111827]/50 hover:border-slate-700 hover:bg-[#111827]/70"
+                  ? "border-[#0094DA]/70 bg-sky-50/70 dark:bg-[#111827]/90 shadow-xl shadow-[#0094DA]/10 ring-1 ring-[#0094DA]/30"
+                  : "border-slate-200 bg-white/90 dark:border-slate-800 dark:bg-[#111827]/50 hover:border-slate-300 dark:hover:border-slate-700 hover:bg-slate-50 dark:hover:bg-[#111827]/70"
               )}
             >
               <div className="flex items-start justify-between gap-4">
@@ -156,14 +156,14 @@ export function MerchantSection() {
                       "size-12 rounded-2xl flex items-center justify-center shrink-0 border transition-colors",
                       activeTab === "coupon"
                         ? "bg-[#0094DA] text-white border-[#0094DA]"
-                        : "bg-slate-900 text-slate-400 border-slate-800 group-hover:text-white"
+                        : "bg-slate-100 text-slate-500 border-slate-200 group-hover:text-slate-900 dark:bg-slate-900 dark:text-slate-400 dark:border-slate-800 dark:group-hover:text-white"
                     )}
                   >
                     <Tag className="size-6" />
                   </div>
                   <div>
                     <div className="flex items-center gap-2">
-                      <h3 className="text-xl font-bold text-white tracking-tight">
+                      <h3 className="text-xl font-bold text-slate-900 dark:text-white tracking-tight">
                         Publish Exclusive Deals & Coupons
                       </h3>
                       {activeTab === "coupon" && (
@@ -172,19 +172,19 @@ export function MerchantSection() {
                         </span>
                       )}
                     </div>
-                    <p className="text-xs text-slate-400 mt-0.5">
+                    <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
                       Launch custom discounts and drive immediate foot-traffic to your store
                     </p>
                   </div>
                 </div>
               </div>
 
-              <p className="mt-4 text-sm text-slate-300 leading-relaxed">
+              <p className="mt-4 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                 Create and publish promotional deals directly from your phone in seconds. Set your discount percentage, upload your campaign image, and define validity dates. Published coupons appear instantly in the Rizipt shopper feed for local customers to discover, save, and redeem at your counter—bringing verified foot traffic with zero ad agency middlemen.
               </p>
 
               {/* Feature Checklist */}
-              <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-4 border-t border-slate-800/80 text-xs text-slate-300">
+              <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-4 border-t border-slate-200 dark:border-slate-800/80 text-xs text-slate-700 dark:text-slate-300">
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="size-4 text-[#0094DA] shrink-0" />
                   <span>Instant in-app coupon publishing</span>
@@ -206,21 +206,21 @@ export function MerchantSection() {
 
             {/* Merchant Metrics Row */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
-              <div className="rounded-2xl border border-slate-800 bg-[#111827]/70 p-3.5 text-center">
-                <div className="text-xl sm:text-2xl font-black text-white">100%</div>
-                <div className="text-[11px] text-slate-400 font-medium mt-0.5">Paperless & BPA Free</div>
+              <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-[#111827]/70 p-3.5 text-center shadow-xs dark:shadow-none">
+                <div className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">100%</div>
+                <div className="text-[11px] text-slate-500 dark:text-slate-400 font-medium mt-0.5">Paperless & BPA Free</div>
               </div>
-              <div className="rounded-2xl border border-slate-800 bg-[#111827]/70 p-3.5 text-center">
+              <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-[#111827]/70 p-3.5 text-center shadow-xs dark:shadow-none">
                 <div className="text-xl sm:text-2xl font-black text-[#0094DA]">&lt; 2s</div>
-                <div className="text-[11px] text-slate-400 font-medium mt-0.5">Receipt Delivery</div>
+                <div className="text-[11px] text-slate-500 dark:text-slate-400 font-medium mt-0.5">Receipt Delivery</div>
               </div>
-              <div className="rounded-2xl border border-slate-800 bg-[#111827]/70 p-3.5 text-center">
-                <div className="text-xl sm:text-2xl font-black text-white">$0</div>
-                <div className="text-[11px] text-slate-400 font-medium mt-0.5">Hardware Purchase</div>
+              <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-[#111827]/70 p-3.5 text-center shadow-xs dark:shadow-none">
+                <div className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">$0</div>
+                <div className="text-[11px] text-slate-500 dark:text-slate-400 font-medium mt-0.5">Hardware Purchase</div>
               </div>
-              <div className="rounded-2xl border border-slate-800 bg-[#111827]/70 p-3.5 text-center">
-                <div className="text-xl sm:text-2xl font-black text-emerald-400">0%</div>
-                <div className="text-[11px] text-slate-400 font-medium mt-0.5">Added Surcharges</div>
+              <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-[#111827]/70 p-3.5 text-center shadow-xs dark:shadow-none">
+                <div className="text-xl sm:text-2xl font-black text-emerald-500 dark:text-emerald-400">0%</div>
+                <div className="text-[11px] text-slate-500 dark:text-slate-400 font-medium mt-0.5">Added Surcharges</div>
               </div>
             </div>
           </div>

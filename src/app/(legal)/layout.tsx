@@ -9,7 +9,7 @@ export default function LegalRouteLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex min-h-screen flex-col bg-[#0B0F17] text-slate-100 selection:bg-[#0094DA]/30 selection:text-white">
+    <div className="flex min-h-screen flex-col bg-background text-foreground selection:bg-[#0094DA]/30 selection:text-white">
       <Navbar />
 
       <main className="flex-1 py-12 sm:py-16 lg:py-20">
@@ -18,7 +18,7 @@ export default function LegalRouteLayout({
           <div className="mb-8">
             <Link
               href="/"
-              className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-400 hover:text-[#0094DA] transition-colors group cursor-pointer"
+              className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 dark:text-slate-400 hover:text-[#0094DA] transition-colors group cursor-pointer"
             >
               <ChevronLeft className="size-4 transition-transform group-hover:-translate-x-0.5" />
               <span>Back to Home</span>
@@ -29,16 +29,16 @@ export default function LegalRouteLayout({
           {children}
 
           {/* Legal Compliance Support Card */}
-          <div className="mt-12 rounded-2xl border border-slate-800 bg-[#111827]/50 p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+          <div className="mt-12 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-[#111827]/50 p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 shadow-sm dark:shadow-none">
             <div className="flex items-start gap-4">
               <div className="size-10 rounded-xl bg-[#0094DA]/15 text-[#0094DA] flex items-center justify-center shrink-0 border border-[#0094DA]/30">
                 <Mail className="size-5" />
               </div>
               <div>
-                <h3 className="text-base font-bold text-white">
+                <h3 className="text-base font-bold text-slate-900 dark:text-white">
                   Have questions regarding our legal disclaimers?
                 </h3>
-                <p className="mt-1 text-xs text-slate-400">
+                <p className="mt-1 text-xs text-slate-600 dark:text-slate-400">
                   Our privacy compliance and legal officers respond to all inquiries within 24–48 business hours.
                 </p>
               </div>

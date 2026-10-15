@@ -3,7 +3,7 @@
 @import "shadcn/tailwind.css";
 @plugin "@tailwindcss/typography";
 
-@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
   --color-background: var(--background);
@@ -56,37 +56,37 @@
   --brand: #0094DA;
   --brand-hover: #007cb8;
   --brand-foreground: #ffffff;
-  --background: #0B0F17;
-  --foreground: #f8fafc;
-  --card: #111827;
-  --card-foreground: #f8fafc;
-  --popover: #111827;
-  --popover-foreground: #f8fafc;
+  --background: #ffffff;
+  --foreground: #090d16;
+  --card: #ffffff;
+  --card-foreground: #090d16;
+  --popover: #ffffff;
+  --popover-foreground: #090d16;
   --primary: #0094DA;
   --primary-foreground: #ffffff;
-  --secondary: #161F30;
-  --secondary-foreground: #f8fafc;
-  --muted: #161F30;
-  --muted-foreground: #94a3b8;
-  --accent: #161F30;
-  --accent-foreground: #f8fafc;
+  --secondary: #f1f5f9;
+  --secondary-foreground: #090d16;
+  --muted: #f8fafc;
+  --muted-foreground: #64748b;
+  --accent: #f1f5f9;
+  --accent-foreground: #090d16;
   --destructive: #ef4444;
-  --border: rgba(51, 65, 85, 0.7);
-  --input: rgba(51, 65, 85, 0.7);
+  --border: #e2e8f0;
+  --input: #e2e8f0;
   --ring: #0094DA;
   --chart-1: #0094DA;
-  --chart-2: #38bdf8;
-  --chart-3: #818cf8;
-  --chart-4: #34d399;
-  --chart-5: #f472b6;
+  --chart-2: #0284c7;
+  --chart-3: #6366f1;
+  --chart-4: #10b981;
+  --chart-5: #ec4899;
   --radius: 1rem;
-  --sidebar: #0B0F17;
-  --sidebar-foreground: #f8fafc;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #090d16;
   --sidebar-primary: #0094DA;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #161F30;
-  --sidebar-accent-foreground: #f8fafc;
-  --sidebar-border: rgba(51, 65, 85, 0.7);
+  --sidebar-accent: #f1f5f9;
+  --sidebar-accent-foreground: #090d16;
+  --sidebar-border: #e2e8f0;
   --sidebar-ring: #0094DA;
 }
 

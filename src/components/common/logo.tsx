@@ -12,7 +12,7 @@ export function Logo({ className }: LogoProps) {
     <Link
       href="/"
       className={cn(
-        "group inline-flex items-center gap-2.5 font-bold tracking-tight text-xl text-white transition-opacity hover:opacity-90 select-none",
+        "group inline-flex items-center gap-2.5 font-bold tracking-tight text-xl text-slate-900 dark:text-white transition-opacity hover:opacity-90 select-none",
         className
       )}
       aria-label="Rizipt Home"
@@ -27,7 +27,7 @@ export function Logo({ className }: LogoProps) {
           priority
         />
       </div>
-      <div className="flex items-center font-extrabold tracking-tight text-white text-lg sm:text-xl">
+      <div className="flex items-center font-extrabold tracking-tight text-slate-900 dark:text-white text-lg sm:text-xl">
         <span>Rizipt</span>
         <span className="text-[#0094DA]">.</span>
       </div>

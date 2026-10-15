@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/sonner";
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { ThemeProvider } from "@/components/theme-provider";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -22,8 +23,8 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://rizipt.com";
 
 export const viewport: Viewport = {
   themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
     { media: "(prefers-color-scheme: dark)", color: "#0B0F17" },
-    { media: "(prefers-color-scheme: light)", color: "#0094DA" },
   ],
   width: "device-width",
   initialScale: 1,
@@ -174,9 +175,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={cn(
         "h-full",
-        "dark",
         "antialiased",
         geistSans.variable,
         geistMono.variable,
@@ -191,11 +192,17 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-full flex flex-col bg-[#0B0F17] text-slate-100 selection:bg-[#0094DA]/30 selection:text-white">
-        {children}
-        <Toaster richColors position="top-right" />
-        <Analytics />
-        <SpeedInsights />
+      <body className="min-h-full flex flex-col bg-background text-foreground transition-colors duration-300 selection:bg-[#0094DA]/30 selection:text-white">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem={false}
+        >
+          {children}
+          <Toaster richColors position="top-right" />
+          <Analytics />
+          <SpeedInsights />
+        </ThemeProvider>
       </body>
     </html>
   );

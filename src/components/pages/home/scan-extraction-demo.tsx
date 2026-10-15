@@ -72,7 +72,7 @@ export function ScanExtractionDemo() {
   };
 
   return (
-    <section id="features" className="py-20 md:py-28 bg-[#0B0F17] border-t border-slate-800/80 scroll-mt-16">
+    <section id="features" className="py-20 md:py-28 bg-white dark:bg-[#0B0F17] border-t border-slate-200/80 dark:border-slate-800/80 scroll-mt-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mx-auto max-w-3xl text-center">
@@ -80,19 +80,19 @@ export function ScanExtractionDemo() {
             <Sparkles className="size-3.5" />
             <span>AI Extraction Flow</span>
           </div>
-          <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+          <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
             Snap Any Receipt.{" "}
-            <span className="block bg-gradient-to-r from-[#0094DA] via-sky-400 to-cyan-300 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-[#0094DA] via-sky-500 dark:via-sky-400 to-cyan-500 dark:to-cyan-300 bg-clip-text text-transparent">
               Organized in 3 Simple Steps.
             </span>
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
             From physical paper to structured, tax-deductible records in under a second. See how Rizipt automates every capture step without tedious typing.
           </p>
         </div>
 
         {/* Workspace Area: Left Mobile Screen Mockup + Right Milestone Track */}
-        <div className="mt-14 mx-auto max-w-6xl rounded-3xl border border-slate-800/80 bg-[#111827]/60 backdrop-blur-md p-4 sm:p-8 lg:p-10 shadow-2xl">
+        <div className="mt-14 mx-auto max-w-6xl rounded-3xl border border-slate-200/90 dark:border-slate-800/80 bg-slate-50/70 dark:bg-[#111827]/60 backdrop-blur-md p-4 sm:p-8 lg:p-10 shadow-xl dark:shadow-2xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
             {/* Left Column: Realistic Smartphone Screen Mockup */}
             <div className="lg:col-span-5 flex flex-col items-center justify-center">
@@ -220,7 +220,7 @@ export function ScanExtractionDemo() {
               <div className="relative flex flex-col space-y-6 sm:space-y-8 pl-2 sm:pl-4">
                 {/* Continuous Vertical Milestone Track Line */}
                 <div
-                  className="absolute left-6 sm:left-8 top-6 bottom-6 w-0.5 bg-gradient-to-b from-[#0094DA] via-[#0094DA]/60 to-slate-800"
+                  className="absolute left-6 sm:left-8 top-6 bottom-6 w-0.5 bg-gradient-to-b from-[#0094DA] via-[#0094DA]/60 to-slate-200 dark:to-slate-800"
                   aria-hidden="true"
                 />
 
@@ -240,7 +240,7 @@ export function ScanExtractionDemo() {
                           "relative z-10 flex size-10 sm:size-12 shrink-0 items-center justify-center rounded-2xl font-black text-xs sm:text-sm transition-all duration-300 select-none",
                           isActive
                             ? "bg-[#0094DA] text-white shadow-lg shadow-[#0094DA]/40 scale-110 ring-4 ring-[#0094DA]/20"
-                            : "bg-[#161F30] text-slate-400 border border-slate-700/80 group-hover:border-[#0094DA]/60 group-hover:text-white"
+                            : "bg-white dark:bg-[#161F30] text-slate-500 dark:text-slate-400 border border-slate-200 dark:border-slate-700/80 group-hover:border-[#0094DA]/60 group-hover:text-slate-900 dark:group-hover:text-white"
                         )}
                       >
                         <Icon className="size-4 sm:size-5" />
@@ -251,8 +251,8 @@ export function ScanExtractionDemo() {
                         className={cn(
                           "flex-1 rounded-2xl p-5 sm:p-6 transition-all duration-300 border shadow-md",
                           isActive
-                            ? "bg-[#161F30] border-[#0094DA]/60 shadow-[#0094DA]/10 ring-1 ring-[#0094DA]/30"
-                            : "bg-[#111827]/70 border-slate-800/90 hover:border-slate-700 hover:bg-[#161F30]/70"
+                            ? "bg-sky-50/80 dark:bg-[#161F30] border-[#0094DA]/70 dark:border-[#0094DA]/60 shadow-[#0094DA]/10 ring-1 ring-[#0094DA]/30"
+                            : "bg-white/90 dark:bg-[#111827]/70 border-slate-200/90 dark:border-slate-800/90 hover:border-slate-300 dark:hover:border-slate-700 hover:bg-slate-50 dark:hover:bg-[#161F30]/70"
                         )}
                       >
                         {/* Top Milestone Badge */}
@@ -262,24 +262,24 @@ export function ScanExtractionDemo() {
                               "inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-[10px] sm:text-xs font-bold uppercase tracking-wider border",
                               isActive
                                 ? "bg-[#0094DA]/15 text-[#0094DA] border-[#0094DA]/30"
-                                : "bg-slate-900 text-slate-400 border-slate-800"
+                                : "bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-800"
                             )}
                           >
                             <span>{milestone.badge}</span>
                           </span>
 
-                          <span className="font-mono text-xs font-bold text-slate-500">
+                          <span className="font-mono text-xs font-bold text-slate-400 dark:text-slate-500">
                             PHASE {milestone.step}
                           </span>
                         </div>
 
                         {/* Title */}
-                        <h3 className="mt-3 text-base sm:text-lg font-bold text-white group-hover:text-cyan-300 transition-colors">
+                        <h3 className="mt-3 text-base sm:text-lg font-bold text-slate-900 dark:text-white group-hover:text-[#0094DA] dark:group-hover:text-cyan-300 transition-colors">
                           {milestone.title}
                         </h3>
 
                         {/* Description */}
-                        <p className="mt-2 text-xs sm:text-sm text-slate-400 leading-relaxed">
+                        <p className="mt-2 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                           {milestone.description}
                         </p>
 
@@ -291,8 +291,8 @@ export function ScanExtractionDemo() {
                               className={cn(
                                 "inline-flex items-center gap-1 rounded-lg px-2 py-1 text-[11px] font-medium border transition-colors",
                                 isActive
-                                  ? "bg-slate-950/80 text-slate-300 border-slate-800"
-                                  : "bg-slate-950/50 text-slate-500 border-slate-800/60"
+                                  ? "bg-white dark:bg-slate-950/80 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-800"
+                                  : "bg-slate-50 dark:bg-slate-950/50 text-slate-500 dark:text-slate-500 border-slate-200/80 dark:border-slate-800/60"
                               )}
                             >
                               <CheckCircle2 className="size-3 text-[#0094DA]" />

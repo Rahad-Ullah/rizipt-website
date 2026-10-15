@@ -19,7 +19,7 @@ export function DownloadBadges({
 
   const buttonClass = cn(
     "group inline-flex items-center gap-3 rounded-2xl transition-all duration-200 active:scale-95 select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0094DA]",
-    "bg-[#111827]/85 hover:bg-[#161F30] text-white border border-slate-700/60 hover:border-[#0094DA]/60 backdrop-blur-md shadow-lg shadow-black/40 hover:shadow-[#0094DA]/20 hover:-translate-y-0.5",
+    "bg-slate-900 hover:bg-slate-800 text-white border border-slate-800 hover:border-[#0094DA]/60 dark:bg-[#111827]/85 dark:hover:bg-[#161F30] dark:border-slate-700/60 backdrop-blur-md shadow-md dark:shadow-lg dark:shadow-black/40 hover:shadow-[#0094DA]/20 hover:-translate-y-0.5",
     isLg ? "px-5 py-3 min-w-[175px]" : "px-4 py-2.5 min-w-[155px]"
   );
 

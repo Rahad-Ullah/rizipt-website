@@ -228,4 +228,32 @@ test.describe('Rizipt Landing Page Smoke & Content Verification', () => {
     await expect(privacyLink).toBeVisible();
     await expect(termsLink).toBeVisible();
   });
+
+  test('defaults to light mode theme and allows switching via navbar toggle button', async ({ page }) => {
+    // 1. Verify default theme is light mode
+    const html = page.locator('html');
+    await expect(html).not.toHaveClass(/dark/);
+
+    // 2. Locate the visible theme toggle button in navbar
+    const themeToggle = page
+      .getByRole('banner')
+      .getByRole('button', { name: /switch to dark theme/i })
+      .filter({ visible: true });
+    await expect(themeToggle).toBeVisible();
+
+    // 3. Click to switch to dark mode
+    await themeToggle.click();
+    await expect(html).toHaveClass(/dark/);
+
+    // 4. Button label should now indicate switching to light theme
+    const themeToggleLight = page
+      .getByRole('banner')
+      .getByRole('button', { name: /switch to light theme/i })
+      .filter({ visible: true });
+    await expect(themeToggleLight).toBeVisible();
+
+    // 5. Click again to switch back to light mode
+    await themeToggleLight.click();
+    await expect(html).not.toHaveClass(/dark/);
+  });
 });

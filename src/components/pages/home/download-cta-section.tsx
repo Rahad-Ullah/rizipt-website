@@ -4,7 +4,7 @@ import { DownloadBadges, DynamicQRCode } from "@/components/common";
 
 export function DownloadCTASection({ appLinks }: { appLinks: { appStore: string, playStore: string, siteUrl: string } }) {
   return (
-    <section id="download" className="py-20 md:py-28 bg-[#0B0F17] border-t border-slate-800/80 scroll-mt-16">
+    <section id="download" className="py-20 md:py-28 bg-white dark:bg-[#0B0F17] border-t border-slate-200/80 dark:border-slate-800/80 scroll-mt-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="relative overflow-hidden rounded-[36px] bg-slate-950 px-6 py-16 sm:px-12 sm:py-20 lg:p-20 shadow-2xl ring-1 ring-slate-800">
           {/* Subtle gradient highlights */}

@@ -100,7 +100,7 @@ export function PromoCodesSection() {
   };
 
   return (
-    <section id="promos" className="py-20 md:py-28 bg-[#0B0F17] border-t border-slate-800/80 scroll-mt-16">
+    <section id="promos" className="py-20 md:py-28 bg-slate-50/50 dark:bg-[#0B0F17] border-t border-slate-200/80 dark:border-slate-800/80 scroll-mt-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mx-auto max-w-3xl text-center">
@@ -108,19 +108,19 @@ export function PromoCodesSection() {
             <Tag className="size-3.5" />
             <span>In-App Merchant Perks</span>
           </div>
-          <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+          <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
             Shop Smarter.{" "}
-            <span className="block bg-linear-to-r from-[#0094DA] via-sky-400 to-cyan-300 bg-clip-text text-transparent">
+            <span className="block bg-linear-to-r from-[#0094DA] via-sky-500 dark:via-sky-400 to-cyan-500 dark:to-cyan-300 bg-clip-text text-transparent">
               Unlock Exclusive In-App Deals.
             </span>
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
             Discover verified partner promotions, discount vouchers, and flash savings directly from top retail brands and neighborhood favorites—redeemable with one tap at checkout.
           </p>
         </div>
 
         {/* 2-Column Showcase */}
-        <div className="mt-16 mx-auto max-w-6xl rounded-3xl border border-slate-800/80 bg-[#111827]/60 backdrop-blur-md p-6 sm:p-10 lg:p-12 shadow-2xl">
+        <div className="mt-16 mx-auto max-w-6xl rounded-3xl border border-slate-200/90 dark:border-slate-800/80 bg-white/80 dark:bg-[#111827]/60 backdrop-blur-md p-6 sm:p-10 lg:p-12 shadow-xl dark:shadow-2xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             {/* Left Column: Interactive Storytelling & Value Pillars */}
             <div className="lg:col-span-7 flex flex-col justify-center space-y-8">
@@ -128,17 +128,17 @@ export function PromoCodesSection() {
                 <span className="text-xs font-mono font-semibold uppercase tracking-wider text-[#0094DA]">
                   Smart Coupon Discovery
                 </span>
-                <h3 className="mt-2 text-2xl sm:text-3xl font-bold text-white leading-tight">
+                <h3 className="mt-2 text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white leading-tight">
                   No expired codes. No coupon clipping. Just instant savings.
                 </h3>
-                <p className="mt-3 text-sm sm:text-base text-slate-400 leading-relaxed">
+                <p className="mt-3 text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed">
                   Every time you scan receipts or view store locations in Rizipt, our partner network surfaces active deals for that exact merchant.
                 </p>
               </div>
 
               {/* Interactive Merchant Selector Tabs */}
               <div>
-                <span className="text-xs font-semibold text-slate-300 block mb-2.5">
+                <span className="text-xs font-semibold text-slate-700 dark:text-slate-300 block mb-2.5">
                   Try viewing different in-app partner coupons:
                 </span>
                 <div className="flex flex-wrap gap-2.5">
@@ -156,7 +156,7 @@ export function PromoCodesSection() {
                           "rounded-xl px-3.5 py-2 text-xs font-semibold transition-all duration-200 border cursor-pointer flex items-center gap-2",
                           isSelected
                             ? "bg-[#0094DA] text-white border-[#0094DA] shadow-md shadow-[#0094DA]/30 scale-105"
-                            : "bg-[#161F30] text-slate-300 border-slate-800 hover:border-slate-700 hover:text-white"
+                            : "bg-slate-100 dark:bg-[#161F30] text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 hover:text-slate-900 dark:hover:text-white"
                         )}
                       >
                         <span className="size-2 rounded-full bg-emerald-400" />
@@ -169,29 +169,29 @@ export function PromoCodesSection() {
               </div>
 
               {/* Feature Highlights Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-slate-800/80">
-                <div className="rounded-2xl bg-slate-900/60 border border-slate-800 p-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-slate-200 dark:border-slate-800/80">
+                <div className="rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 p-4">
                   <div className="size-8 rounded-xl bg-[#0094DA]/15 text-[#0094DA] flex items-center justify-center mb-2.5 border border-[#0094DA]/30">
                     <Store className="size-4" />
                   </div>
-                  <h4 className="text-sm font-bold text-white">Direct Merchant Deals</h4>
-                  <p className="mt-1 text-xs text-slate-400 leading-relaxed">
+                  <h4 className="text-sm font-bold text-slate-900 dark:text-white">Direct Merchant Deals</h4>
+                  <p className="mt-1 text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                     Exclusive partner offers negotiated directly with brands you shop at weekly.
                   </p>
                 </div>
 
-                <div className="rounded-2xl bg-slate-900/60 border border-slate-800 p-4">
+                <div className="rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 p-4">
                   <div className="size-8 rounded-xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center mb-2.5 border border-emerald-500/30">
                     <ShieldCheck className="size-4" />
                   </div>
-                  <h4 className="text-sm font-bold text-white">100% Verified Active</h4>
-                  <p className="mt-1 text-xs text-slate-400 leading-relaxed">
+                  <h4 className="text-sm font-bold text-slate-900 dark:text-white">100% Verified Active</h4>
+                  <p className="mt-1 text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                     Zero expired links. Coupons stay synced with store POS systems and dates.
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-2 text-xs text-slate-400">
+              <div className="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400">
                 <Sparkles className="size-3.5 text-[#0094DA]" />
                 <span>Tap <strong>Redeem Now</strong> in the simulated phone to test the in-app voucher claim!</span>
               </div>

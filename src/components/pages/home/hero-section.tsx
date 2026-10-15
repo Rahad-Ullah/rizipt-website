@@ -6,10 +6,10 @@ import { DownloadBadges } from "@/components/common";
 
 export function HeroSection({ appLinks }: { appLinks: { appStore: string, playStore: string, siteUrl: string } }) {
   return (
-    <section className="relative overflow-hidden pt-10 pb-20 md:pt-16 md:pb-28 lg:pt-24 lg:pb-36 bg-[#0B0F17]">
-      {/* Background radial glows with #0094DA at 8%–15% opacity */}
+    <section className="relative overflow-hidden pt-10 pb-20 md:pt-16 md:pb-28 lg:pt-24 lg:pb-36 bg-slate-50/60 dark:bg-[#0B0F17]">
+      {/* Background radial glows with #0094DA */}
       <div
-        className="pointer-events-none absolute -top-40 left-1/2 -z-10 h-[560px] w-[900px] -translate-x-1/2 rounded-full bg-radial from-[#0094DA]/15 via-sky-900/10 to-transparent blur-3xl"
+        className="pointer-events-none absolute -top-40 left-1/2 -z-10 h-[560px] w-[900px] -translate-x-1/2 rounded-full bg-radial from-[#0094DA]/10 dark:from-[#0094DA]/15 via-sky-200/40 dark:via-sky-900/10 to-transparent blur-3xl"
         aria-hidden="true"
       />
       <div
@@ -17,7 +17,7 @@ export function HeroSection({ appLinks }: { appLinks: { appStore: string, playSt
         aria-hidden="true"
       />
       <div
-        className="pointer-events-none absolute -bottom-20 -left-40 -z-10 size-[400px] rounded-full bg-radial from-sky-900/15 to-transparent blur-3xl"
+        className="pointer-events-none absolute -bottom-20 -left-40 -z-10 size-[400px] rounded-full bg-radial from-sky-200/40 dark:from-sky-900/15 to-transparent blur-3xl"
         aria-hidden="true"
       />
 
@@ -27,23 +27,23 @@ export function HeroSection({ appLinks }: { appLinks: { appStore: string, playSt
           <div className="flex flex-col items-center text-center lg:col-span-7 lg:items-start lg:text-left">
             {/* Early Access / New Launch Badge */}
             <div className="inline-flex items-center gap-2 rounded-full border border-[#0094DA]/25 bg-[#0094DA]/10 px-4 py-1.5 text-xs sm:text-sm font-medium text-[#0094DA] backdrop-blur-md mb-6 shadow-inner">
-              <Sparkles className="size-3.5 text-cyan-400 shrink-0" />
-              <span className="text-slate-300">Available on iOS & Android</span>
-              <span className="text-slate-600">•</span>
+              <Sparkles className="size-3.5 text-[#0094DA] dark:text-cyan-400 shrink-0" />
+              <span className="text-slate-600 dark:text-slate-300">Available on iOS & Android</span>
+              <span className="text-slate-400 dark:text-slate-600">•</span>
               <span className="font-semibold text-[#0094DA]">Join Early Access</span>
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.12]">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.12]">
               Scan Smarter.{" "}
-              <span className="bg-gradient-to-r from-[#0094DA] via-sky-400 to-cyan-300 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#0094DA] via-sky-500 dark:via-sky-400 to-cyan-500 dark:to-cyan-300 bg-clip-text text-transparent">
                 Save Faster.
               </span>{" "}
               Manage Every Receipt.
             </h1>
 
             {/* Subheading */}
-            <p className="mt-6 text-lg sm:text-xl text-slate-400 font-normal leading-relaxed max-w-2xl">
+            <p className="mt-6 text-lg sm:text-xl text-slate-600 dark:text-slate-400 font-normal leading-relaxed max-w-2xl">
               The intelligent mobile app that turns physical receipts into instant itemized records, unlocks exclusive merchant coupons, and keeps your finances effortlessly organized.
             </p>
 
@@ -53,7 +53,7 @@ export function HeroSection({ appLinks }: { appLinks: { appStore: string, playSt
             </div>
 
             {/* Quick feature highlights */}
-            <div className="mt-9 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs sm:text-sm text-slate-300 w-full max-w-lg">
+            <div className="mt-9 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs sm:text-sm text-slate-700 dark:text-slate-300 w-full max-w-lg">
               <div className="flex items-center justify-center lg:justify-start gap-2">
                 <CheckCircle2 className="size-4 text-[#0094DA] shrink-0" />
                 <span>0.3s On-Device OCR</span>
